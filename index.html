@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, userscalable=no">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800;900&display=swap" rel="stylesheet">
+    <title>Buy IPhone 14</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container" id="header">
+            <nav class="nav">
+                <ul class="navlist">
+                    <li class="navlist__li-1"><a href="#new">Что нового</a></li>
+                    <li class="navlist__li-2"><a href="#choose">Цвет</a></li>
+                    <li class="navlist__li-3"><a href="#buy">Заказать</a></li>
+                </ul>
+                <img src="images/logo.svg" alt="Apple Logo">
+                <p class="header__phone">+38 050-456-56-56</p>
+            </nav>
+        </div>
+    </header>
+
+
+    <main>
+        <section>
+            <div class="hero">
+                <div class="container">
+                    <h1 class="hero__text">
+                        IPHONE 14 PRO
+                    </h1>
+                    <img src="images/hero.png" alt="Iphones image" class="hero__image">
+                    <form action="">
+                        <button type="button">
+                            <p>ВЫБРАТЬ</p>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="new" id="new">
+                    <h2>ЧТО НОВОГО</h2>
+                    <div class="new__info">
+                        <div class="new__info-left">
+                            <p>Все модели оснащены однокристальной системой A16 Bionic, 48-мегапиксельной основной камерой и экранами ProMotion с защитой Ceramic Shield и 
+                                частотным диапазоном 1 — 120 Гц, а также ускоренной памятью LPDDR5. Дизайн линейки обновлен, на фронтальной панели смартфонов два выреза. </p>
+                            <p>Все iPhone 14 в США будут продаваться без лотка для SIM-карт: производитель заявляет, что улучшенная технология eSIM позволит перенести старые электронные сим-карты на новые смартфоны.</p>
+                            <p>Обновлены фронтальная камера (она снабжена автофокусом и быстрее распознает пользователя в условиях недостаточной освещенности) и сенсор основной камеры.</p>
+                            <p>iPhone 14 Pro вышел в новом дизайне — без фирменной «челки». Также в ассортименте появился новый цвет. В смартфоне, в отличие от «обычных» 14-х айфонов, 
+                                установлен процессор A16 Bionic, который может за секунду производить 4 трлн операций с фото.</p>
+                        </div>
+                        <div class="new__info-right">
+                            <img src="images/new.png" alt="Iphone 14 image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="choose" id="choose">
+                    <h2>ВЫБЕРИ СВОЙ ЦВЕТ</h2>
+                    <div class="choose__cards">
+                        <div class="choose__card">
+                            <img src="images/silver.jpg" alt="Silver IPhone">
+                            <p>Silver</p>
+                            <p>Серебристый</p>
+                        </div>
+                        <div class="choose__card">
+                            <img src="images/purple.jpg" alt="Purple IPhone">
+                            <p>Deep purple</p>
+                            <p>Тёмно фиолетовый</p>
+                        </div>
+                        <div class="choose__card">
+                            <img src="images/gold.jpg" alt="Gold IPhone">
+                            <p>Gold</p>
+                            <p>Золотой</p>
+                        </div>
+                        <div class="choose__card">
+                            <img src="images/black.jpg" alt="Space Black IPhone">
+                            <p>Space Black</p>
+                            <p>Космически чёрный</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="buy" id="buy">
+                    <div class="buy__left">
+                        <h2>ХОЧЕШЬ IPHONE 14 PRO?</h2>
+                        <div class="buy__left-inputs">
+                            <input type="text" placeholder="Имя" required>
+                            <input type="number" placeholder="Номер телефона" required>
+                        </div>
+                        <p>В ближайшее время наш менеджер свяжется с Вами</p>
+                        <form action="">
+                            <button type="button">
+                                <h4>ЗАКАЗАТЬ</h4>
+                            </button>
+                        </form>
+                    </div>
+                    <div class="buy__right">
+                        <img src="images/buy.jpg" alt="Purple IPhone image">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <nav class="footer__nav">
+                <p><a href="#header">Политика конфиденциальности</a></p>
+                <a href="#header"><img src="images/logo.svg" alt="Apple Logo"></a>
+                <p class="footer__phone">+38 050-456-56-56</p>
+            </nav>
+        </div>
+    </footer>
+    <script>
+        // Найти все ссылки начинающиеся на #
+        const anchors = document.querySelectorAll('a[href^="#"]')
+
+        // Цикл по всем ссылкам
+        for(let anchor of anchors) {
+        anchor.addEventListener("click", function(e) {
+            e.preventDefault() // Предотвратить стандартное поведение ссылок
+            // Атрибут href у ссылки, если его нет то перейти к body (наверх не плавно)
+            const goto = anchor.hasAttribute('href') ? anchor.getAttribute('href') : 'body'
+            // Плавная прокрутка до элемента с id = href у ссылки
+            document.querySelector(goto).scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+            })
+        })
+        }
+    </script>
+</body>
+</html>
